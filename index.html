@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>fullpage作业</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<link rel='stylesheet' type="text/css" href="css/fullpage.css" />
+	</head>
+	<body>
+		<div id="fullpage">
+			<div class="section section1">
+				<div class="bgsize one_bg1">
+				</div>
+				<div class='one'>
+					<div class="top one_top"></div>
+					<img class="one_left" src="img/l1.png"></img>
+					<img class="one_right" src="img/r1.png"></img>
+					<img class="rightBottom" src="img/qtcode.png"></img>
+					<a class="godown" href="#page2"></a>
+				</div>
+			</div>
+			<div class="section section2">
+				<div class="bgsize two_bg1"></div>
+				<div class='two'>
+					<div class="top two_top"></div>
+					<img class="two_left" src="img/l2.png"></img>
+					<img class="two_left2" src="img/l2-1.png"></img>
+					<img class="two_left3" src="img/l2-2.png"></img>
+					<img class="two_left4" src="img/tip.png"></img>
+					<img class="two_left5" src="img/hand.png"></img>
+					<img class="two_right" src="img/r2.png"></img>
+					<img class="rightBottom" src="img/qtcode.png"></img>
+					<a class="godown" href="#page3"></a>
+				</div>
+			</div>
+			<div class="section section3">
+				<div class="bgsize  three_bg1"></div>
+				<div class="three_bg2"></div>
+				<div class='three'>
+					<div class="top three_top"></div>
+					<img class="three_left" src="img/l3.png"></img>
+					<img class="three_right" src="img/r3.png"></img>
+					<img class="rightBottom" src="img/qtcode.png"></img>
+					<a class="godown" href="#page4"></a>
+				</div>
+			</div>
+			<div class="section section4">
+				<div class="bgsize  four_bg1"></div>
+				<div class='bgsize four'>
+					<div class="top four_top"></div>
+					<img class="four_left" src="img/l4.png"></img>
+					<img class="four_left2" src="img/l4-1.png"></img>
+					<img class="four_left3" src="img/l4-2.png"></img>
+					<img class="four_left4" src="img/l4-3.png"></img>
+					<img class="four_left5" src="img/l4-4.png"></img>
+					<img class="four_left6" src="img/dian.png"></img>
+					<img class="four_left7" src="img/l4-5.png"></img>
+					<img class="four_right" src="img/r4.png"></img>
+					<img class="rightBottom" src="img/qtcode.png"></img>
+					<a class="godown" href="#page5"></a>
+				</div>
+			</div>
+			<div class="section section5">
+				<img class="five_bg1" src="img/bg5-3.png" />
+				<div class="five_bg2"></div>
+				<div class='five'>
+					<div class="top five_top"></div>
+					<img class="five_left" src="img/l5.png"></img>
+					<img class="five_right" src="img/r5.png"></img>
+					<img class="rightBottom" src="img/qtcode.png"></img>
+					<a class="godown" href="#page1"></a>
+				</div>
+			</div>
+		</div>
+		<script type='text/javascript' src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src='js/jquery.fullPage.js'></script>
+		<script>
+			//获取设备的宽度
+			var screenWidth = window.screen.availWidth;
+			//获取设备的高度
+			//			var screenHeight=window.screen.availHeight;
+			//			console.log(screenWidth);
+			//			console.log(screenHeight);
+			$(function() {
+				//设置每一张的背景图片里面的背景图片的大小
+				$('.section').css('width', screenWidth);
+				var Wh = $(document).height();
+				$('.bgsize').css('height', Wh);
+				$('.two_bg1').css('height', Wh);
+				$('.three_bg2').css('height', Wh);
+				$('.five_bg2').css('height', Wh);
+				var Ww = $(document).width();
+				var godown1 = $('godown').width();
+				var left2 = Ww / 2 - godown1 / 2;
+				$('.godown').css('left', left2);
+				//写下箭头透明度改变的函数
+				//				$('.godown').animate({
+				//					
+				//				},1000);
+				//fullpage代码
+				$('#fullpage').fullpage({
+					//背景色
+					//					sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90','#f00','#cde'],
+					anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+					//					menu:'.menu',
+					'navigation': true,
+					'navigationPosition': 'right',
+					      'navigationTooltips': ['证券时报网', '财院社区', '爱股快信', '股票情报', '新股助手'],
+					'verticalCentered': true,
+					//循环播放
+					continuousVertical: true,
+					//css中写的是开始的效果，js中写的是最终呈现的效果
+					afterRender: function() {
+						$('.one_left').css({
+							'left': 120 + 'px',
+							'top': 50 + 'px'
+						})
+						$('.one_right').css({
+							right: 120 + 'px',
+							top: 30 + 'px'
+						});
+						$('.section1 .one_bg1').css({
+							'display': 'block'
+						});
+					},
+					afterLoad: function(anchorLink, index) {
+						if(index == 1) {
+							$('.one_left').animate({
+								left: 120 + 'px',
+								top: 50 + 'px'
+							}, 1000)
+							$('.one_right').animate({
+								right: 120 + 'px',
+								top: 30 + 'px'
+							}, 1000);
+							$('.section1 .one_bg1').delay(1000).fadeIn(1500);
+						}
+						if(index == 2) {
+							$('.two_left').animate({
+								left: 110 + 'px',
+								top: 70 + 'px'
+							}, 1000);
+							$('.two_left2').delay(1000).fadeIn(1000, function() {
+								$('.two_left3').animate({
+									//										display:'block',
+									opacity: 1,
+									left: 143 + 'px',
+									top: 70 + 'px'
+								}, 800, function() {
+									$('.two_left4').css({
+										'display': 'block'
+									});
+									$('.two_left4').animate({
+										left: 481 + 'px',
+										top: 155 + 'px'
+									}, 600)
+									$('.two_left5').css({
+										'display': 'block'
+									});
+									$('.two_left5').animate({
+										left: 481 + 'px',
+										top: 155 + 'px'
+									}, 600, function() {
+										$('.two_left5').animate({
+											left: 1329 + 'px',
+											top: 155 + 'px'
+										}, 600)
+									})
+								})
+							});
+							$('.two_right').animate({
+								right: 120 + 'px',
+								top: 50 + 'px'
+							}, 1000);
+							$('.section2 .two_bg1').animate({
+								left: 0 + 'px',
+								top: -20 + 'px'
+							}, 2000)
+						};
+						if(index == 3) {
+							$('.three_left').animate({
+								left: 80 + 'px',
+								top: 205 + 'px'
+							}, 1000);
+							$('.three_right').animate({
+								right: 120 + 'px',
+								top: 30 + 'px'
+							}, 1000);
+							$('.section3 .three_bg2').fadeIn(800);
+							$('.section3 .three_bg2').animate({
+								left: 0 + 'px',
+								top: 0 + 'px',
+								easing: 'liner'
+							}, 1000);
+							$('.section3 .three_bg1').animate({
+								left: 0 + 'px',
+								top: 0 + 'px',
+								easing: 'liner'
+							}, 1000);
+						}
+						if(index == 4) {
+							$('.four_left').animate({
+								left: 172 + 'px',
+								top: 30 + 'px'
+							}, 1000, function() {
+								$('.four_left2').animate({
+									left: 128 + 'px',
+									top: 20 + 'px',
+									opacity: 1
+								}, 1000, function() {
+									$('.four_left3').animate({
+										left: 231 + 'px',
+										top: 9 + 'px',
+										opacity: 1
+									}, 1000, function() {
+										$('.four_left5').fadeIn('liner', function() {
+											$('.four_left4').fadeIn('liner');
+											$('.four_left7').fadeIn('liner', function() {
+												$('.four_left6').fadeIn('liner');
+											});
+										});
+									})
+								})
+							});
+							$('.four_right').animate({
+								right: 120 + 'px',
+								top: 180 + 'px'
+							}, 1000);
+						}
+						if(index == 5) {
+							$('.five_left').animate({
+								left: 100 + 'px',
+								top: 90 + 'px'
+							}, 1000);
+							$('.five_right').animate({
+								right: 120 + 'px',
+								top: 140 + 'px'
+							}, 1000);
+						}
+					},
+					onLeave: function(index, nextIndex, direction) {
+						if(index == 1) {
+							$('.one_left').animate({
+								left: -443 + 'px',
+								top: 50 + 'px'
+							}, 1000);
+							$('.one_right').animate({
+								right: -745 + 'px',
+								top: 30 + 'px'
+							}, 1000);
+							$('.section1 .one_bg1').css({
+								'display': 'none'
+							});
+						};
+						if(index == 2) {
+							//当离开页面时，将所有动画停止。
+							$('.two_left1').animate().stop();
+							$('.two_left2').animate().stop();
+							$('.two_left3').animate().stop();
+							$('.two_left4').animate().stop();
+							$('.two_left5').animate().stop();
+							$('.section2 .two_bg1').animate().stop();
+							$('.two_left').animate({
+								left: -820 + 'px',
+								top: 70 + 'px'
+							}, 1000);
+							$('.two_left2').css({
+								'display': 'none'
+							});
+							$('.two_left3').css({
+								'opacity': 0,
+								left: 91 + 'px',
+								top: 123 + 'px'
+							});
+							$('.two_left4').css({
+								'display': 'none',
+								left: 1329 + 'px',
+								top: 155 + 'px'
+							});
+							$('.two_left5').css({
+								'display': 'none',
+								left: 1329 + 'px',
+								top: 155 + 'px'
+							});
+							$('.two_right').animate({
+								right: -473 + 'px',
+								top: 50 + 'px'
+							}, 1000);
+							$('.section2 .two_bg1').css({
+								left: 0 + 'px',
+								top: -100 + 'px'
+							}, 2000);
+						};
+						if(index == 3) {
+							$('.section3 .three_bg1').animate().stop();
+							$('.section3 .three_bg2').animate().stop();
+							$('.three_left').animate({
+								left: -570 + 'px',
+								top: 205 + 'px'
+							}, 1000)
+							$('.three_right').animate({
+								right: -493 + 'px',
+								top: 30 + 'px'
+							}, 1000)
+							$('.section3 .three_bg1').css({
+								left: 0 + 'px',
+								top: -86 + 'px'
+							});
+							$('.section3 .three_bg2').css({
+								'display': 'none',
+								left: 0 + 'px',
+								top: -20 + 'px'
+							});
+						};
+						if(index == 4) {
+							$('.four_left').animate().stop();
+							$('.four_left1').animate().stop();
+							$('.four_left2').animate().stop();
+							$('.four_left3').animate().stop();
+							$('.four_left4').animate().stop();
+							$('.four_left5').animate().stop();
+							$('.four_left6').animate().stop();
+							$('.four_left7').animate().stop();
+							$('.four_left').animate({
+								left: -296 + 'px',
+								top: 30 + 'px'
+							}, 1000);
+							$('.four_left2').css({
+								'opacity': 0,
+								left: 72 + 'px',
+								top: 26 + 'px'
+							});
+							$('.four_left3').css({
+								'opacity': 0,
+								left: 174 + 'px',
+								top: 17 + 'px'
+							});
+							$('.four_left4').css({
+								'display': 'none'
+							});
+							$('.four_left5').css({
+								'display': 'none'
+							});
+							$('.four_left6').css({
+								'display': 'none'
+							});
+							$('.four_left7').css({
+								'display': 'none'
+							});
+							$('.four_right').animate({
+								right: -575 + 'px',
+								top: 180 + 'px'
+							}, 1000);
+						};
+						if(index == 5) {
+							$('.five_left').animate({
+								left: -600 + 'px',
+								top: 90 + 'px'
+							}, 1000);
+							$('.five_right').animate({
+								right: -520 + 'px',
+								top: 140 + 'px'
+							}, 1000);
+						}
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>

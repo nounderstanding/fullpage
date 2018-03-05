@@ -1,0 +1,348 @@
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+.fp-tableCell {
+    display: block;
+}
+/*section1*/
+.section{
+	position: relative;
+	width: 1366px;
+	overflow: hidden;
+}
+.bgsize{
+	width: 1366px;
+}
+.section1{
+	background: url(../img/bg1.png) repeat;	
+}
+.section1 .one_bg1{
+	display: none;
+	background:url(../img/bg1-3.png) 50% 50% no-repeat;
+}
+.section1 .one{
+	/*width:1366px;*/
+}
+.top{
+	width: 310px;
+	height:99px;
+	left:44%;
+	top:26px;
+	z-index: 9999;
+}
+.one_top,.one_rightBottom,.one_left,.one_right,.one_bottom{
+	position: absolute;
+}
+.one_top{
+	background:url(../img/logo.png);
+	left: 43%;
+}
+.section1 .one .one_left{
+	left:-443px;
+	top:50px;
+}
+.section1 .one .one_right{
+	right:-745px;
+	top:30px;
+}
+/*下箭头*/
+.godown{
+	position: absolute;
+	display: block;
+	bottom:0;
+	width: 50px;
+	height: 53px;
+	background: url(../img/godown.png);
+	opacity: 1;
+	animation:scroll1 2s linear infinite;
+	z-index: 999999;
+}
+@-webkit-keyframes scroll1{
+	0%{opacity: .8;}
+	50%{opacity: .3;}
+	100%{opacity: .8;}
+}
+@-moz-keyframes scroll1{
+	0%{opacity: .8;}
+	50%{opacity: .3;}
+	100%{opacity: .8;}
+}
+@-ms-keyframes scroll1{
+	0%{opacity: .8;}
+	50%{opacity: .3;}
+	100%{opacity: .8;}
+}
+@keyframes scroll1{
+	0%{opacity: .8;}
+	50%{opacity: .3;}
+	100%{opacity: .8;}
+}
+/*右下角*/
+.rightBottom{
+	position: absolute;
+	right:30px;
+	bottom:30px;
+}
+
+
+/*section2*/
+.section2{
+	background: url(../img/bg2.png) repeat;	
+	position: relative;
+}
+.fp-tableCell{
+	position: relative;
+}
+.section2 .two_bg1{
+	background:url(../img/bg2-3.png) 50% 50% no-repeat;
+	position: absolute;
+	top:-100px;
+	left:0;
+	width: 100%;
+}
+.section2 .two{
+	/*width:1366px;*/
+}
+.two_top,.two_rightBottom,.two_left,.two_right,.two_bottom,.two_left2,.two_left3,.two_left4,.two_left5{
+	position: absolute;
+}
+.two_top{
+	background:url(../img/logo.png) 0 28%;
+	left:40%;
+	
+}
+.section2 .two .two_left{
+	left:-820px;
+	top:70px;
+}
+.section2 .two .two_left2{
+	display: none;
+	left:111px;
+	top:123px;
+}
+.section2 .two .two_left3{
+	opacity: 0;
+	left:91px;
+	top:123px;
+}
+.section2 .two .two_left4{
+	left:1329px;
+	top:155px;
+}
+.section2 .two .two_left5{
+	left:1329px;
+	top:155px;
+}
+.section2 .two .two_right{
+	right:-473px;
+	top:50px;
+}
+
+
+/*section3*/
+.section3{
+	background: url(../img/bg3.png) repeat;	
+}
+/*section3第一背景*/
+.section3 .three_bg1{
+	background:url(../img/bg3-3.png) 50% 50% no-repeat;
+	z-index: 1;
+	position: absolute;
+	top:-86px;
+	left: 0;
+}
+.section3 .three{
+	/*width:1366px;*/
+}
+.three_top,.three_rightBottom,.three_left,.three_right,.three_bottom{
+	position: absolute;
+	z-index: 9999;
+}
+/*section3第二背景*/
+.three_bg2{
+	display: none;
+	position: absolute;
+	width:100%;
+	height: 300px;
+	background:url(../img/bg3-4.png) 50% 50% no-repeat;
+	z-index: 3333;
+	left: 0;
+	top:-20px;
+	opacity: 1;
+}
+.section3 .three .three_top{
+	width: 258px;
+	height:84px;
+	background:url(../img/logo.png) 0 54%;
+	left: 42%;
+}
+.section3 .three .three_left{
+	left:-570px;
+	top:205px;
+}
+.section3 .three .three_right{
+	right:-493px;
+	top:30px;
+}
+.section3 .three a{
+	cursor: pointer;
+}
+/*section4*/
+.section4{
+	background: url(../img/bg4.png) repeat-x;	
+}
+/*.section4 .four{
+	width:1366px;
+	background:url(../img/bg4-3.png) 50% 50% no-repeat;
+}*/
+.four_top,.four_rightBottom,.four_left,.four_right,.four_bottom,.four_left2,.four_left3,.four_left4,.four_left5,.four_left6,.four_left7{
+	position: absolute;
+}
+.section4 .four .four_top{
+	width: 258px;
+	height:80px;
+	background:url(../img/logo.png) 0 75%;
+	z-index: 9999;
+}
+.section4 .four .four_left{
+	left:-296px;
+	top:30px;
+}
+.section4 .four .four_left2{
+	opacity: 0;
+	left:72px;
+	top:26px;
+}
+.section4 .four .four_left3{
+	opacity: 0;
+	left:174px;
+	top:17px;
+}
+.section4 .four .four_left4{
+	display: none;
+	left: 178px;
+    top: 176px;
+}
+.section4 .four .four_left5{
+	display: none;
+	left: 360px;
+    top: 300px;
+}
+.section4 .four .four_left6{
+	display: none;
+	left: 374px;
+    top: 286px;
+    animation:heart 2s linear infinite;
+}
+@-webkit-keyframes heart{
+		0%{transform: scale(1,1)}
+		100%{transform:scale(2,2)}
+	}
+@-moz-keyframes heart{
+	0%{transform:scale(1,1)}
+	100%{transform:scale(2,2)}
+}
+@-ms-keyframes heart{
+	0%{transform:scale(1,1)}
+	100%{transform:scale(2,2)}
+}
+@keyframes heart{
+	0%{transform:scale(1,1)}
+	100%{transform:scale(2,2)}
+}
+.section4 .four .four_left7{
+	display: none;
+	left: 36px;
+    top: 159px;
+}
+.section4 .four .four_right{
+	right:-575px;
+	top:180px;
+}
+
+
+/*section5*/
+.section5{
+	background: url(../img/bg5.png) repeat;	
+}
+.section5 .five_bg1{
+	position: absolute;
+	left: 0;
+	top:0px;
+	animation: 10s huan linear infinite 500ms;
+}
+@-webkit-keyframes huan{
+		0%{top:0}
+		100%{top:-2000px}
+	}
+@-moz-keyframes huan{
+	0%{top:0}
+	100%{top:-2000px}
+}
+@-ms-keyframes huan{
+	0%{top:0}
+	100%{top:-2000px}
+}
+@keyframes huan{
+	0%{top:0}
+	100%{top:-2000px}
+}
+.section5 .five{
+	/*width:1366px;*/
+}
+.five_top,.five_rightBottom,.five_left,.five_right,.five_bottom{
+	position: absolute;
+}
+.section5 .five .five_top{
+	width: 258px;
+    height: 67px;
+    background: url(../img/logo.png) 0 97% no-repeat;
+    left:44%;
+}
+.section5 .five .five_left{
+	left:-600px;
+	top:90px;
+}
+.section5 .five .five_right{
+	right:-520px;
+	top:140px;
+}
+.section5 .five_bg2{
+	position: absolute;
+	width:100%;
+	background:url(../img/bg5-4.png) 50% 0 repeat;
+	z-index: 0;
+	left: 0;
+	/*bottom:-314px;*/
+	bottom: -45px;
+}
+/*右边导航*/
+#fp-nav ul li, .fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 18px;
+    margin: 7px;
+    position: relative;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	display: block;
+    top: 10px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background: rgba(143,157,164,.5);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
+    background:white;
+}
+/*右边导航居中*/
+#fp-nav ul li .fp-tooltip {
+    top: 8px;
+    }
+  
